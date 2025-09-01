@@ -14,18 +14,23 @@ html{
 }
 
 header{
-	margin: 5	0px;
+	margin: 50px;
 }
 
 .container{
-	min-height: 800px;
+	min-height: 70vh;
 	background: url('img/image.jpg') center/cover no-repeat;
 
+}
+
+h3{
+	padding-top: 50px;
 }
 
 .my_projects {
 	display: block;
 	left: 10px;
+	margin-top: 20px;
 }
 
 .my_projects a{
