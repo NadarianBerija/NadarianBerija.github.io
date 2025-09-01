@@ -13,8 +13,8 @@ html{
 	background: rgb(3, 1, 16);
 }
 
-header, footer{
-
+header{
+	margin: 50px;
 }
 
 .container{
