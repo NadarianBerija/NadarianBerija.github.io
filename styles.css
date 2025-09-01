@@ -10,11 +10,11 @@ html{
 	font-size: 50px;
 	text-align: center;
 	color: #ffff;
-	background: rgb(3, 1, 16);
+	background: black;
 }
 
 header{
-	margin: 50px;
+	margin: 5	0px;
 }
 
 .container{
