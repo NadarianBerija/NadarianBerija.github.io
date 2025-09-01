@@ -13,8 +13,8 @@ html{
 	background: #27353f;
 }
 
-header{
-
+header, footer{
+	background-color: rgb(62, 4, 4);
 }
 
 .container{
