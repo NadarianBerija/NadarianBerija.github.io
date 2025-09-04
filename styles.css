@@ -7,36 +7,151 @@
 
 html{
 	font-family: 'Roboto', sans-serif;
-	font-size: 50px;
-	text-align: center;
-	color: #ffff;
-	background: black;
+	background-color: black;
+	scroll-behavior: smooth;
 }
 
-header{
-	margin: 50px;
+ul {
+	position: fixed;
+	display: flex;
+	list-style: none;
+	gap: 5px;
+	color: black;
+	font-size: 30px;
+	background-color: white;
+	width: 100px;
+	padding: 5px;
+	margin-left: 20px;
 }
 
-.container{
-	min-height: 70vh;
+ul a {
+	text-decoration: none;
+	color: black;
+}
+
+ul a:hover {
+	text-decoration: underline 2px;
+}
+
+.container-main {
+	display: flex;
+	justify-content: center;
+	min-height: 100vh;
 	background: url('img/image.jpg') center/cover no-repeat;
-
+	text-align: center;
+	color: white;
 }
 
-h3{
+.title h2{
+	font-size: 100px;
+	margin-top: 160px;
+	opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+	  animation-delay: 0.5s;
+}
+
+
+
+.title p{
+	font-size: 36px;
+	margin-bottom: 120px;
+	opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+	  animation-delay: 0.8s;
+}
+
+.title a{
+	color: white;
+	text-decoration: none;
+	border: solid white 2px;
+	border-radius: 5px;
+	padding: 10px;
+	font-size: 22px;
+	background-color: rgba(0, 0, 0, 0.3);
+	transition: background-color 0.3s ease, border 0.3s ease, font-size 0.3s ease, padding 0.3s ease;
+	opacity: 0;
+      transform: translateY(30px);
+      animation: slideUp 1s ease forwards;
+	  animation-delay: 1.8s;
+}
+
+.title a:hover {
+	border: solid rgb(138, 138, 138) 2px;
+	font-size: 24px;
+	padding: 12px;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+
+.container-portfolio {
+	width: 50%;
+	margin: 0 auto;
+	/* display: flex;
+	justify-content: center;
+	align-items: center; */
+}
+
+.my_projects hr {
+	width: 100%;
+	border: solid 1px black;
+}
+
+ h3{
+	font-size: 60px;
+	text-align: center;
+	color: white;
 	padding-top: 50px;
 }
 
+
+
 .my_projects {
-	display: block;
-	left: 10px;
+	margin: 70px 0;
+	padding: 50px 20px;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
 	background: rgb(255,255,255,0.7);
-	margin: 20px 500px 0 500px;
+	gap: 30px;
+	font-size: 40px;
 }
+
 
 .my_projects a{
-	color: #0489a7;
+	color: black;
+	text-decoration: none;
+	transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+.my_projects a:hover{
+	color: #594854;
+	font-size: 42px;
 }
 
 
+hr {
+	border: solid 3px white;
+}
 
+.contacts{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 50px 0;
+	display: flex;
+	justify-content: center;
+}
+
+span {
+	font-weight: 300;
+}
