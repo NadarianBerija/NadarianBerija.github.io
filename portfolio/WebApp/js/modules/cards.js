@@ -40,7 +40,7 @@ function cards() {
             }
         }
 
-        getResource('http://localhost:3000/menu')
+        getResource('http://localhost:3001/menu')
             .then(date => {
                 date.forEach(({img, altimg, title, descr, price}) => {
                     new MenuCard(img, altimg, title, descr, price, ".menu .container").render();

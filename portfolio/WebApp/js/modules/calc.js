@@ -19,7 +19,7 @@ function calc() {
 
     function calcTotal() {
         if (!sex || !height || !weight || !age || !ratio) {
-            result.textContent = '___';
+            result.textContent = '_____';
             return;
         }
         if (sex === 'female') {

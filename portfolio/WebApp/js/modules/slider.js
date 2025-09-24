@@ -34,19 +34,19 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
 
     const indicators = document.createElement('ol'),
         dots = [];
-        indicators.classList.add('carousel-indicators');
-        indicators.style.cssText = `
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 15;
-            display: flex;
-            justify-content: center;
-            margin-right: 15%;
-            margin-left: 15%;
-            list-style: none;
-            `; 
+    indicators.classList.add('carousel-indicators');
+    indicators.style.cssText = `
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        margin-right: 15%;
+        margin-left: 15%;
+        list-style: none;
+        `; 
     slider.append(indicators);
 
     for(let i = 0; i < slides.length; i++) {
@@ -75,13 +75,13 @@ function slider({container, slide, nextArrow, prevArrow, totalCounter, currentCo
     }
 
     next.addEventListener('click', () => {
-        if (offset == (deleteNotDigits(width) * (slides.lenght - 1))) {
+        if (offset == (deleteNotDigits(width) * (slides.length - 1))) {
             offset = 0;
         } else {
             offset += deleteNotDigits(width);
         }
 
-        slidesField.style.transform = `translatex(-${offset}px)`;
+        slidesField.style.transform = `translateX(-${offset}px)`;
 
         if (slideIndex == slides.length) {
             slideIndex = 1;
