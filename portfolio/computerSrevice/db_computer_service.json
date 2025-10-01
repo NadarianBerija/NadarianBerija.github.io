@@ -1,0 +1,53 @@
+{
+  "items": [
+    {
+      "img": "img/tabs/pc1.jpg",
+      "altimg": "pc1",
+      "title": "CyberStorm Titan",
+      "descr": "Встречайте CyberStorm Titan — игровой ПК, созданный для тех, кто стремится к абсолютному превосходству в виртуальных мирах. Оснащённый мощным процессором Intel Core i7 13-го поколения и видеокартой NVIDIA GeForce RTX 4070 Ti, этот компьютер обеспечит плавный и захватывающий геймплей даже в самых требовательных играх. 32 ГБ оперативной памяти и быстрый SSD на 1 ТБ позволят мгновенно загружать игры и приложения, а стильный корпус с RGB-подсветкой добавит атмосферу настоящего игрового шторма. CyberStorm Titan — это мощь, скорость и стиль в одном корпусе, готовый вывести вашу игру на новый уровень.",
+      "price": 1200
+    }
+  ],
+
+  "requests": [
+    
+  ],
+
+  "components": [
+    {
+      "name": "Intel Core i5-12400F",
+      "category": "cpu",
+      "price": 120
+    },
+    {
+      "name": "NVIDIA RTX 4060",
+      "category": "gpu",
+      "price": 250
+    },
+    {
+      "name": "16GB DDR4 3200MHz",
+      "category": "ram",
+      "price": 40
+    },
+    {
+      "name": "SSD 1TB NVMe",
+      "category": "storage",
+      "price": 50
+    },
+    {
+      "name": "650W Bronze",
+      "category": "psu",
+      "price": 35
+    },
+    {
+      "name": "ATX Mid Tower",
+      "category": "case",
+      "price": 30
+    },
+    {
+      "name": "AMD Ryzen 5 5600X",
+      "category": "cpu",
+      "price": 110
+    }
+  ]
+}
