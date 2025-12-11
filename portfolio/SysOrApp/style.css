@@ -1,0 +1,277 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1, h2 {
+    color: #1d3557;
+    text-align: center;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    perspective: 2500px;
+    width: 100%;
+}
+
+.card {
+    width: 200px;
+    height: 280px;
+    cursor: pointer;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 12px;
+}
+
+.card.is-flipped {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+.card-front {
+    background-color: #457b9d;
+    color: white;
+}
+
+.card-back {
+    background-color: #a8dadc;
+    color: #1d3557;
+    transform: rotateY(180deg);
+}
+
+.card-back h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* Test Mode Styles */
+.hidden {
+    display: none !important;
+}
+
+#test-area {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 2px solid #1d3557;
+}
+
+#source-cards .card {
+    transform-style: flat; /* remove 3d for draggable cards */
+    cursor: grab;
+    background-color: #457b9d;
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 180px;
+    height: 100px;
+}
+
+#source-cards .card:active {
+    cursor: grabbing;
+}
+
+
+.drop-zones-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.drop-zone {
+    width: 45%;
+    min-height: 200px;
+    padding: 20px;
+    border: 3px dashed #a8dadc;
+    border-radius: 12px;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.drop-zone.drag-over {
+    background-color: #e0f7fa;
+    border-color: #1d3557;
+}
+
+.drop-zone h3 {
+    text-align: center;
+    margin-top: 0;
+    color: #1d3557;
+}
+
+.drop-zone .card {
+    width: 160px;
+    height: 90px;
+    font-size: 1rem;
+    margin: 10px auto;
+}
+
+.hint-btn {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-test-btn, #random-btn, #check-btn, #back-btn, #retry-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#start-test-btn {
+    background-color: #e63946;
+}
+
+#check-btn, #retry-btn {
+    background-color: #4caf50;
+}
+
+#random-btn, #back-btn {
+    background-color: #3992e6;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+#timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    color: #1d3557;
+}
+
+#results {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.correct {
+    border: 2px solid green;
+}
+
+.good {
+    color: green;
+    margin-right: 10px;
+}
+
+.incorrect {
+    border: 2px solid red;
+}
+
+.bad {
+    color: red;
+}
+
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    z-index: 100;
+}
+.tooltip.show {
+    opacity: 1;
+}
+
+.card.learned .card-face {
+    border: 4px solid #4caf50;
+    
+}
+
+.card.learned .card-front {
+    background: linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), #457b9d;
+}
+
+
+.card.learned .card-back {
+    background: linear-gradient(rgba(30, 82, 95, 0.15), rgba(30, 82, 95, 0.15)), #a8dadc;
+}
+
+.learn-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 28px;
+    height: 28px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: #bbb; 
+    color: white;
+    font-weight: bold;
+}
+
+.card.learned .learn-btn {
+    background-color: #4caf50; 
+}
